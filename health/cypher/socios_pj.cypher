@@ -1,4 +1,4 @@
-LOAD CSV WITH HEADERS FROM 'https://github.com/elizarp/public/raw/refs/heads/master/health/socios_pf.csv' as row
+LOAD CSV WITH HEADERS FROM 'https://github.com/elizarp/public/raw/refs/heads/master/health/socios_pj.csv' as row
 
 MATCH (socio:PessoaFisica {documento:row.CPF_SOCIO})
 
