@@ -9,7 +9,7 @@ CALL (row){
 
     MERGE (pf:PessoaFisica {documento:row.DOCUMENTO_BENEFICIARIO})
     ON CREATE SET
-        pf.nome = row.NOME
+        pf.nome = toUpper(row.NOME)
 
     MERGE (solicitante:Prestador {prestadorCodigo:row.CODIGO_SOLICITANTE})
     SET
